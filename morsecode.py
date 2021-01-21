@@ -44,7 +44,7 @@ def search_validated_morse_code(user_input):
 
 
 def is_validated_morse_code(user_input):
-    return not re.search('[^-.\s]', user_input) and re.search('[-.]', user_input) and search_validated_morse_code(user_input)
+    return not re.search('[^-.\s]', user_input) and search_validated_morse_code(user_input)
 
 
 def get_cleaned_english_sentence(raw_english_sentence):
