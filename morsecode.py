@@ -39,7 +39,7 @@ def is_validated_english_sentence(user_input):
 def search_validated_morse_code(user_input):
     morse_code = get_morse_code_dict()
     for morse in user_input.split():
-        if not morse in get_morse_code_dict().values(): return False
+        if not morse in morse_code.values(): return False
     return True
 
 
