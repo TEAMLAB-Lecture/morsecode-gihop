@@ -33,11 +33,7 @@ def is_help_command(user_input):
 
 
 def is_validated_english_sentence(user_input):
-    # user_input = 'This is Gachon University.'
-    # print(re.search('[^a-zA-Z.,!?\s]', user_input))
-    # print(re.search('[a-zA-Z]', user_input))
-    # print(re.match('[^.,!?\s]', user_input))
-    return True if not re.search('[^a-zA-Z.,!?\s]', user_input) and re.search('[^.,!?\s]', user_input) else False
+    return not re.search('[^a-zA-Z.,!?\s]', user_input) and re.search('[^.,!?\s]', user_input)
 
 
 def search_validated_morse_code(user_input):
@@ -96,10 +92,6 @@ def is_zero(user_input):
 
 def main():
     print("Morse Code Program!!")
-    # ===Modify codes below=============
-
-    # test = '!X!'
-    # print(is_validated_english_sentence(test))
     while(True):
         user_input = input('Input your message(H - Help, 0 - Exit): ')
 
@@ -119,12 +111,8 @@ def main():
             print('Wrong Input')
 
     encoding_sentence('Hello! This is CS fifty Class.')
-
-    # ==================================
     print("Good Bye")
     print("Morse Code Program Finished!!")
-
-#입력받고 strip()
 
 if __name__ == "__main__":
     main()
